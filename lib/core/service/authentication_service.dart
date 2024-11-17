@@ -11,7 +11,7 @@ class AuthenticationService {
 
   Future<bool> login(String username, String password) async {
     try {
-      final response = await dio.post('/login', data: {
+      final response = await dio.post('https://reqres.in/api/login', data: {
         'username': username,
         'password': password
       });
